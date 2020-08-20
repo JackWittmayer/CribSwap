@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D969EAB1C161BEE73877055 /* Pods_CribSwap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378B22110120B6C69AF951D1 /* Pods_CribSwap.framework */; };
+		3E5D3129C691D0F2177BBFDF /* Pods_CribSwapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78A1DF336D094FA27AFE29A /* Pods_CribSwapTests.framework */; };
 		5607DF4424E6299100F0C65B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF4324E6299100F0C65B /* AppDelegate.swift */; };
 		5607DF4624E6299100F0C65B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF4524E6299100F0C65B /* SceneDelegate.swift */; };
-		5607DF4824E6299100F0C65B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF4724E6299100F0C65B /* ViewController.swift */; };
+		5607DF4824E6299100F0C65B /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF4724E6299100F0C65B /* ListingViewController.swift */; };
 		5607DF4B24E6299100F0C65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607DF4924E6299100F0C65B /* Main.storyboard */; };
 		5607DF4D24E6299500F0C65B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5607DF4C24E6299500F0C65B /* Assets.xcassets */; };
 		5607DF5024E6299500F0C65B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5607DF4E24E6299500F0C65B /* LaunchScreen.storyboard */; };
 		5607DF5B24E6299500F0C65B /* CribSwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF5A24E6299500F0C65B /* CribSwapTests.swift */; };
 		5607DF6624E6299500F0C65B /* CribSwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607DF6524E6299500F0C65B /* CribSwapUITests.swift */; };
+		561A66F624EC3FA800E4E29E /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A66F524EC3FA800E4E29E /* ListingCell.swift */; };
+		561A66F824EC6F6A00E4E29E /* ListingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */; };
+		561A66FA24EE055B00E4E29E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561A66F924EE055B00E4E29E /* GoogleService-Info.plist */; };
+		569B63C824EB61E700B434A3 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B63C724EB61E700B434A3 /* Listing.swift */; };
+		58013BA95A79BD9A083D7863 /* Pods_CribSwap_CribSwapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F52F8838AD08E74D20F3976 /* Pods_CribSwap_CribSwapUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2761D336A2FA1FF539A1CC1A /* Pods-CribSwap-CribSwapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwap-CribSwapUITests.release.xcconfig"; path = "Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		378B22110120B6C69AF951D1 /* Pods_CribSwap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CribSwap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5607DF4024E6299100F0C65B /* CribSwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CribSwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5607DF4324E6299100F0C65B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5607DF4524E6299100F0C65B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5607DF4724E6299100F0C65B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5607DF4724E6299100F0C65B /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		5607DF4A24E6299100F0C65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5607DF4C24E6299500F0C65B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5607DF4F24E6299500F0C65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,17 @@
 		5607DF6124E6299500F0C65B /* CribSwapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CribSwapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5607DF6524E6299500F0C65B /* CribSwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CribSwapUITests.swift; sourceTree = "<group>"; };
 		5607DF6724E6299500F0C65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561A66F524EC3FA800E4E29E /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
+		561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingInfoViewController.swift; sourceTree = "<group>"; };
+		561A66F924EE055B00E4E29E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		569B63C724EB61E700B434A3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		588DD32ECAB9AE3C37B5A0CD /* Pods-CribSwapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwapTests.release.xcconfig"; path = "Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F52F8838AD08E74D20F3976 /* Pods_CribSwap_CribSwapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CribSwap_CribSwapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D559D19AD9D5A0E04642E38 /* Pods-CribSwap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwap.release.xcconfig"; path = "Target Support Files/Pods-CribSwap/Pods-CribSwap.release.xcconfig"; sourceTree = "<group>"; };
+		9B479ED2E24A5CD0FA1108C6 /* Pods-CribSwapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwapTests.debug.xcconfig"; path = "Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EE637057653BC2962393493 /* Pods-CribSwap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwap.debug.xcconfig"; path = "Target Support Files/Pods-CribSwap/Pods-CribSwap.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB4312D8DCF5C50EEE01984 /* Pods-CribSwap-CribSwapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CribSwap-CribSwapUITests.debug.xcconfig"; path = "Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F78A1DF336D094FA27AFE29A /* Pods_CribSwapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CribSwapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D969EAB1C161BEE73877055 /* Pods_CribSwap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5D3129C691D0F2177BBFDF /* Pods_CribSwapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58013BA95A79BD9A083D7863 /* Pods_CribSwap_CribSwapUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2113657C5320629ECBD120BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				378B22110120B6C69AF951D1 /* Pods_CribSwap.framework */,
+				5F52F8838AD08E74D20F3976 /* Pods_CribSwap_CribSwapUITests.framework */,
+				F78A1DF336D094FA27AFE29A /* Pods_CribSwapTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5607DF3724E6299100F0C65B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				5607DF5924E6299500F0C65B /* CribSwapTests */,
 				5607DF6424E6299500F0C65B /* CribSwapUITests */,
 				5607DF4124E6299100F0C65B /* Products */,
+				6162F2C6B729ACF1753DC45F /* Pods */,
+				2113657C5320629ECBD120BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +134,14 @@
 		5607DF4224E6299100F0C65B /* CribSwap */ = {
 			isa = PBXGroup;
 			children = (
+				561A66F924EE055B00E4E29E /* GoogleService-Info.plist */,
+				561A66F524EC3FA800E4E29E /* ListingCell.swift */,
 				5607DF4324E6299100F0C65B /* AppDelegate.swift */,
 				5607DF4524E6299100F0C65B /* SceneDelegate.swift */,
-				5607DF4724E6299100F0C65B /* ViewController.swift */,
+				5607DF4724E6299100F0C65B /* ListingViewController.swift */,
+				569B63C724EB61E700B434A3 /* Listing.swift */,
 				5607DF4924E6299100F0C65B /* Main.storyboard */,
+				561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */,
 				5607DF4C24E6299500F0C65B /* Assets.xcassets */,
 				5607DF4E24E6299500F0C65B /* LaunchScreen.storyboard */,
 				5607DF5124E6299500F0C65B /* Info.plist */,
@@ -128,6 +167,20 @@
 			path = CribSwapUITests;
 			sourceTree = "<group>";
 		};
+		6162F2C6B729ACF1753DC45F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EE637057653BC2962393493 /* Pods-CribSwap.debug.xcconfig */,
+				8D559D19AD9D5A0E04642E38 /* Pods-CribSwap.release.xcconfig */,
+				BDB4312D8DCF5C50EEE01984 /* Pods-CribSwap-CribSwapUITests.debug.xcconfig */,
+				2761D336A2FA1FF539A1CC1A /* Pods-CribSwap-CribSwapUITests.release.xcconfig */,
+				9B479ED2E24A5CD0FA1108C6 /* Pods-CribSwapTests.debug.xcconfig */,
+				588DD32ECAB9AE3C37B5A0CD /* Pods-CribSwapTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +188,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5607DF6A24E6299500F0C65B /* Build configuration list for PBXNativeTarget "CribSwap" */;
 			buildPhases = (
+				A1BB0F8B8DBBB48000319C6E /* [CP] Check Pods Manifest.lock */,
+				59B212AD4664AC2009548350 /* [CP] Prepare Artifacts */,
 				5607DF3C24E6299100F0C65B /* Sources */,
 				5607DF3D24E6299100F0C65B /* Frameworks */,
 				5607DF3E24E6299100F0C65B /* Resources */,
+				E3FE98EB283B39DE2B73DA42 /* [CP] Embed Pods Frameworks */,
+				8EA0531049B76E92BE97F88D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +209,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5607DF6D24E6299500F0C65B /* Build configuration list for PBXNativeTarget "CribSwapTests" */;
 			buildPhases = (
+				B42FB23B74A1FD0FF0BCAB3D /* [CP] Check Pods Manifest.lock */,
+				59866603F179A540F7AFFABA /* [CP] Prepare Artifacts */,
 				5607DF5224E6299500F0C65B /* Sources */,
 				5607DF5324E6299500F0C65B /* Frameworks */,
 				5607DF5424E6299500F0C65B /* Resources */,
+				B36ABE93C9588F0D57057AEC /* [CP] Embed Pods Frameworks */,
+				7293E9657E5232F53C6927B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +231,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5607DF7024E6299500F0C65B /* Build configuration list for PBXNativeTarget "CribSwapUITests" */;
 			buildPhases = (
+				35028CDA92C82E3F7181658F /* [CP] Check Pods Manifest.lock */,
+				5148531E399F325F6FB319E8 /* [CP] Prepare Artifacts */,
 				5607DF5D24E6299500F0C65B /* Sources */,
 				5607DF5E24E6299500F0C65B /* Frameworks */,
 				5607DF5F24E6299500F0C65B /* Resources */,
+				AD6EDB787D561224D5BDBBE9 /* [CP] Embed Pods Frameworks */,
+				C68A172995926F3458A43412 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5607DF5024E6299500F0C65B /* LaunchScreen.storyboard in Resources */,
+				561A66FA24EE055B00E4E29E /* GoogleService-Info.plist in Resources */,
 				5607DF4D24E6299500F0C65B /* Assets.xcassets in Resources */,
 				5607DF4B24E6299100F0C65B /* Main.storyboard in Resources */,
 			);
@@ -254,14 +320,239 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35028CDA92C82E3F7181658F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CribSwap-CribSwapUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5148531E399F325F6FB319E8 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59866603F179A540F7AFFABA /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59B212AD4664AC2009548350 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7293E9657E5232F53C6927B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA0531049B76E92BE97F88D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1BB0F8B8DBBB48000319C6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CribSwap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD6EDB787D561224D5BDBBE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B36ABE93C9588F0D57057AEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwapTests/Pods-CribSwapTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B42FB23B74A1FD0FF0BCAB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CribSwapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C68A172995926F3458A43412 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap-CribSwapUITests/Pods-CribSwap-CribSwapUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3FE98EB283B39DE2B73DA42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CribSwap/Pods-CribSwap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5607DF3C24E6299100F0C65B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5607DF4824E6299100F0C65B /* ViewController.swift in Sources */,
+				561A66F624EC3FA800E4E29E /* ListingCell.swift in Sources */,
+				5607DF4824E6299100F0C65B /* ListingViewController.swift in Sources */,
 				5607DF4424E6299100F0C65B /* AppDelegate.swift in Sources */,
+				569B63C824EB61E700B434A3 /* Listing.swift in Sources */,
 				5607DF4624E6299100F0C65B /* SceneDelegate.swift in Sources */,
+				561A66F824EC6F6A00E4E29E /* ListingInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +723,7 @@
 		};
 		5607DF6B24E6299500F0C65B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EE637057653BC2962393493 /* Pods-CribSwap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +742,7 @@
 		};
 		5607DF6C24E6299500F0C65B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D559D19AD9D5A0E04642E38 /* Pods-CribSwap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +761,7 @@
 		};
 		5607DF6E24E6299500F0C65B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B479ED2E24A5CD0FA1108C6 /* Pods-CribSwapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +784,7 @@
 		};
 		5607DF6F24E6299500F0C65B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 588DD32ECAB9AE3C37B5A0CD /* Pods-CribSwapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +807,7 @@
 		};
 		5607DF7124E6299500F0C65B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB4312D8DCF5C50EEE01984 /* Pods-CribSwap-CribSwapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +828,7 @@
 		};
 		5607DF7224E6299500F0C65B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2761D336A2FA1FF539A1CC1A /* Pods-CribSwap-CribSwapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
