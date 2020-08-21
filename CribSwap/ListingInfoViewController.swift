@@ -11,7 +11,7 @@ import UIKit
 class ListingInfoViewController: UIViewController {
     
     var listing: Listing?
-
+// MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var distance: UILabel!
@@ -20,6 +20,8 @@ class ListingInfoViewController: UIViewController {
     @IBOutlet weak var horizontalScroll: UIScrollView!
     @IBOutlet weak var pictureScroll: UIView!
     @IBOutlet weak var detailsSection: UIStackView!
+    
+    //MARK: Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let passedListing = listing else
@@ -52,13 +54,16 @@ class ListingInfoViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    // MARK: Private Methods
     
+    // Adds pictures to the horizontal scroll bar based on the passed in listing:
     func addPictures(pictures: [UIImage]?)
     {
         let height = pictureScroll.frame.height
         var lastPictureEndX: CGFloat = -30
         for picture in pictures!
         {
+            // Scale the image so it fits correctly in the scroll view:
             let scale = pictureScroll.frame.height/picture.size.height
             let pictureView = UIImageView(image: picture)
             pictureView.frame = CGRect(x: lastPictureEndX + 30, y: 0, width: picture.size.width*scale, height: height)
@@ -67,6 +72,7 @@ class ListingInfoViewController: UIViewController {
         }
     }
     
+    // Iterates through all the data in the listing's detail section and adds it to the page:
     func addDetailsSection(details: Details)
     {
         let mirror = Mirror(reflecting: details)
