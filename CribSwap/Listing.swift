@@ -22,12 +22,14 @@ class Listing
     let pictures: [UIImage]?
     let location: String?
     let address: String?
-    let type: listingType
-    let bedroomBath: String
+    let type: Int
+    let bedroomCount: Int
+    let bathroomCount: Int
     let details: Details?
+    let description: String?
     
     // Create listing without details:
-    init(ownerName: String, price: Float, pictures: [UIImage]?, location: String?, address: String?, type: listingType, bedroomBath: String)
+    init(ownerName: String, price: Float, pictures: [UIImage]?, location: String?, address: String?, type: Int, bedroomCount: Int, bathroomCount: Int, description: String?)
     {
         self.ownerName = ownerName
         self.price = price
@@ -35,11 +37,13 @@ class Listing
         self.location = location
         self.address = address
         self.type = type
-        self.bedroomBath = bedroomBath
+        self.bedroomCount = bedroomCount
+        self.bathroomCount = bathroomCount
         self.details = nil
+        self.description = description
     }
     // Create listing with details:
-    init(ownerName: String, price: Float, pictures: [UIImage]?, location: String?, address: String?, type: listingType, bedroomBath: String, details: Details)
+    init(ownerName: String, price: Float, pictures: [UIImage]?, location: String?, address: String?, type: Int, bedroomCount: Int, bathroomCount: Int, description: String?, details: Details?)
     {
         self.ownerName = ownerName
         self.price = price
@@ -47,13 +51,11 @@ class Listing
         self.location = location
         self.address = address
         self.type = type
-        self.bedroomBath = bedroomBath
+        self.bedroomCount = bedroomCount
+        self.bathroomCount = bathroomCount
+        self.description = description
         self.details = details
     }
 }
 
-enum listingType {
-    case buy
-    case sell
-}
 

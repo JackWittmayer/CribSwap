@@ -33,7 +33,7 @@ class ListingInfoViewController: UIViewController {
         subtitle.text = passedListing.ownerName
         distance.text = "1 mile from campus"
         price.text = "$\(passedListing.price)/month"
-        roomtype.text = passedListing.bedroomBath
+        roomtype.text = "\(passedListing.bedroomCount)x\(passedListing.bathroomCount)"
         if let pictures = passedListing.pictures
         {
             addPictures(pictures: pictures)

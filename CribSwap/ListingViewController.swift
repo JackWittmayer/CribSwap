@@ -7,38 +7,79 @@
 //
 
 import UIKit
+import Firebase
 
 // MARK: Sample Data
-let buyListings = [Listing(ownerName: "Sophie Goodwin", price: 800, pictures: nil, location: nil, address: nil, type: listingType.buy, bedroomBath: "4x4")]
-let sellListings = [
-    Listing(ownerName: "Jack Wittmayer", price: 450, pictures: [UIImage(named: "Apartment")!], location: "2nd Avenue Center", address: nil, type: listingType.sell, bedroomBath: "4x4"),
-    Listing(ownerName: "Joe Schmoe", price: 600, pictures: [UIImage(named: "Apartment")!, UIImage(named: "Apartment")!], location: "The Standard", address: nil, type: listingType.sell, bedroomBath: "4x4", details: Details(furnished: "Yes", genderPreference: "Female preferred")),
-    Listing(ownerName: "John Smith", price: 400, pictures: [UIImage(named: "Apartment")!], location: "Gainesville Place", address: nil, type: listingType.sell, bedroomBath: "4x4")]
+let sampleBuyListings = [Listing(ownerName: "Sophie Goodwin", price: 800, pictures: nil, location: nil, address: nil, type: 0, bedroomCount: 4, bathroomCount: 4, description: nil)]
+let sampleSellListings = [
+    Listing(ownerName: "Jack Wittmayer", price: 450, pictures: [UIImage(named: "Apartment")!], location: "2nd Avenue Center", address: nil, type: 1, bedroomCount: 4, bathroomCount: 4, description: nil),
+    Listing(ownerName: "Joe Schmoe", price: 600, pictures: [UIImage(named: "Apartment")!, UIImage(named: "Apartment")!], location: "The Standard", address: nil, type: 1, bedroomCount: 4, bathroomCount: 4, description: nil, details: Details(furnished: "Yes", genderPreference: "Female preferred")),
+    Listing(ownerName: "John Smith", price: 400, pictures: [UIImage(named: "Apartment")!], location: "Gainesville Place", address: nil, type: 1, bedroomCount: 4, bathroomCount: 4, description: nil)]
 
 
 class ListingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: Initialization
-    let listingMode = listingType.sell
+    let listingMode = 1
     var selectedRowIndex = 0
+    var buyListings = [Listing]()
+    var sellListings = [Listing]()
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Listings"
+        let db = Firestore.firestore()
+        db.collection("sellListings").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                if self.listingMode == 1
+                {
+                    self.sellListings = sampleSellListings
+                }
+                else
+                {
+                    self.buyListings = sampleBuyListings
+                }
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    if let ownerName = document["ownerName"], let type = document["type"], let price = document["price"], let bedroomCount = document["bedroomCount"], let bathroomCount = document["bathroomCount"]
+                    {
+                        let listing = Listing(ownerName: ownerName as! String, price: price as! Float, pictures: document["pictures"] as? [UIImage], location: document["location"] as? String, address: document["address"] as? String, type: type as! Int, bedroomCount: bedroomCount as! Int, bathroomCount: bathroomCount as! Int, description: document["desription"] as? String, details: document["details"] as? Details)
+                        print(document["ownerName"])
+                        if self.listingMode == 1
+                        {
+                            self.sellListings.append(listing)
+                        }
+                        else
+                        {
+                            self.buyListings.append(listing)
+                        }
+                    }
+                    else
+                    {
+                        print("Missing essential listing information")
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: TableView Methods
     
     // Returns the number of rows in the table based on the capacity of the sell and buy listing arrays
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if listingMode == listingType.sell
+        if listingMode == 1
         {
-            return sellListings.capacity
+            print(sellListings.count)
+            return sellListings.count
         }
         else
         {
-            return buyListings.capacity
+            return buyListings.count
         }
     }
     
@@ -49,8 +90,9 @@ class ListingViewController: UIViewController, UITableViewDataSource, UITableVie
         let listing: Listing
         
         // Find the appropriate listing to use for the table cell:
-        if listingMode == listingType.sell
+        if listingMode == 1
         {
+            print(indexPath.row)
             listing = sellListings[indexPath.row]
         }
         else
@@ -73,7 +115,7 @@ class ListingViewController: UIViewController, UITableViewDataSource, UITableVie
         // Initialize other cell information from the selected listing:
         cell.distance.text = "1 mile from campus"
         cell.price.text = "$\(listing.price)/month"
-        cell.bedroomBath.text = listing.bedroomBath
+        cell.bedroomBath.text = "\(listing.bedroomCount)x\(listing.bathroomCount)"
         
         // Initialize the cell's picture with the first picture in the listing:
         if let pictures = listing.pictures

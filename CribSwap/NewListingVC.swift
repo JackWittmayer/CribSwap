@@ -15,9 +15,11 @@ class NewListingVC: UIViewController, UITextFieldDelegate, LocationSelectVCDeleg
     func LocationSelectVCResponse(location: Location) {
         locationName.setTitle(location.name, for: .normal)
         locationPicture.image = location.picture
+        address = location.address
     }
     // MARK: Outlets
     @IBOutlet weak var locationName: UIButton!
+    var address: String?
     @IBAction func uploadPictureButton(_ sender: Any) {
     }
     @IBOutlet weak var locationPicture: UIImageView!
@@ -30,15 +32,22 @@ class NewListingVC: UIViewController, UITextFieldDelegate, LocationSelectVCDeleg
     // MARK: Actions
     // Create listing and add it to firebase:
     @IBAction func createListing(_ sender: Any) {
-        var ref: DocumentReference? = nil
-        ref = db.collection("sellListings").addDocument(data: ["ownerName": "Jack Wittmayer", "price": priceField.text!, "bedroomCount": bedroomField.text!, "bathroomCount": bathroomField.text!, "description": descriptionField.text!])
+        if locationName.titleLabel?.text != "" && priceField.text != "" && bedroomField.text != "" && bathroomField.text != "" && descriptionField.text != "" && address != nil
         {
-            err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
+            var ref: DocumentReference? = nil
+            ref = db.collection("sellListings").addDocument(data: ["ownerName": "Jack Wittmayer", "price": Float(priceField.text!), "bedroomCount": Int(bedroomField.text!), "bathroomCount": Int(bathroomField.text!), "description": descriptionField.text!, "type": 1, "location": locationName.titleLabel!.text!, "address": address])
+            {
+                err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
             }
+        }
+        else
+        {
+            print("Missing listing information")
         }
     }
     // Reveal the details section:
