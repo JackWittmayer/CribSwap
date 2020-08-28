@@ -20,6 +20,7 @@
 		561A66F624EC3FA800E4E29E /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A66F524EC3FA800E4E29E /* ListingCell.swift */; };
 		561A66F824EC6F6A00E4E29E /* ListingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */; };
 		561A66FA24EE055B00E4E29E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561A66F924EE055B00E4E29E /* GoogleService-Info.plist */; };
+		564CCD4724F89BBF00F3ECD0 /* designableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564CCD4624F89BBF00F3ECD0 /* designableView.swift */; };
 		569B63C824EB61E700B434A3 /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B63C724EB61E700B434A3 /* Listing.swift */; };
 		56FBD2C024F0353F00DDF5BA /* NewListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBD2BF24F0353F00DDF5BA /* NewListingVC.swift */; };
 		56FBD2C224F04DD100DDF5BA /* LocationSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBD2C124F04DD100DDF5BA /* LocationSelectVC.swift */; };
@@ -63,6 +64,7 @@
 		561A66F524EC3FA800E4E29E /* ListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCell.swift; sourceTree = "<group>"; };
 		561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingInfoViewController.swift; sourceTree = "<group>"; };
 		561A66F924EE055B00E4E29E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		564CCD4624F89BBF00F3ECD0 /* designableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = designableView.swift; sourceTree = "<group>"; };
 		569B63C724EB61E700B434A3 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		56FBD2BF24F0353F00DDF5BA /* NewListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListingVC.swift; sourceTree = "<group>"; };
 		56FBD2C124F04DD100DDF5BA /* LocationSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectVC.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				5607DF4724E6299100F0C65B /* ListingViewController.swift */,
 				569B63C724EB61E700B434A3 /* Listing.swift */,
 				5607DF4924E6299100F0C65B /* Main.storyboard */,
+				564CCD4624F89BBF00F3ECD0 /* designableView.swift */,
 				56FBD2C124F04DD100DDF5BA /* LocationSelectVC.swift */,
 				56FBD2BF24F0353F00DDF5BA /* NewListingVC.swift */,
 				561A66F724EC6F6A00E4E29E /* ListingInfoViewController.swift */,
@@ -553,6 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				561A66F624EC3FA800E4E29E /* ListingCell.swift in Sources */,
+				564CCD4724F89BBF00F3ECD0 /* designableView.swift in Sources */,
 				5607DF4824E6299100F0C65B /* ListingViewController.swift in Sources */,
 				5607DF4424E6299100F0C65B /* AppDelegate.swift in Sources */,
 				56FBD2C224F04DD100DDF5BA /* LocationSelectVC.swift in Sources */,
@@ -736,6 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94D8MG3RU7;
 				INFOPLIST_FILE = CribSwap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -755,6 +760,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94D8MG3RU7;
 				INFOPLIST_FILE = CribSwap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

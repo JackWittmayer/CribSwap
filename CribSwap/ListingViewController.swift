@@ -48,7 +48,6 @@ class ListingViewController: UIViewController, UITableViewDataSource, UITableVie
                     if let ownerName = document["ownerName"], let type = document["type"], let price = document["price"], let bedroomCount = document["bedroomCount"], let bathroomCount = document["bathroomCount"]
                     {
                         let listing = Listing(ownerName: ownerName as! String, price: price as! Float, pictures: document["pictures"] as? [UIImage], location: document["location"] as? String, address: document["address"] as? String, type: type as! Int, bedroomCount: bedroomCount as! Int, bathroomCount: bathroomCount as! Int, description: document["desription"] as? String, details: document["details"] as? Details)
-                        print(document["ownerName"])
                         if self.listingMode == 1
                         {
                             self.sellListings.append(listing)

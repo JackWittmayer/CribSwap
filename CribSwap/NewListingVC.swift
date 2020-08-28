@@ -35,7 +35,7 @@ class NewListingVC: UIViewController, UITextFieldDelegate, LocationSelectVCDeleg
         if locationName.titleLabel?.text != "" && priceField.text != "" && bedroomField.text != "" && bathroomField.text != "" && descriptionField.text != "" && address != nil
         {
             var ref: DocumentReference? = nil
-            ref = db.collection("sellListings").addDocument(data: ["ownerName": "Jack Wittmayer", "price": Float(priceField.text!), "bedroomCount": Int(bedroomField.text!), "bathroomCount": Int(bathroomField.text!), "description": descriptionField.text!, "type": 1, "location": locationName.titleLabel!.text!, "address": address])
+            ref = db.collection("sellListings").addDocument(data: ["ownerName": "Jack Wittmayer", "price": Float(priceField.text!)!, "bedroomCount": Int(bedroomField.text!)!, "bathroomCount": Int(bathroomField.text!)!, "description": descriptionField.text!, "type": 1, "location": locationName.titleLabel!.text!, "address": address!])
             {
                 err in
                 if let err = err {
